@@ -1,0 +1,36 @@
+<!-- Creator: Embox -->
+<!-- Version: N/A -->
+
+<html>
+  <head><link rel="stylesheet" href="style.css"></head>
+    <body>
+  <ul>
+    <li><a class="active" href="https://github.com/emboxity/random-cat">Random Cats</a></li>
+
+  </ul>
+
+
+  <h1 class="desc">Random cat images!</h1>
+  <h1 class="info">Click the button below for a random cat image.
+
+
+  </h1>
+
+  <button onclick = "catFunction()" class="button">Click me for a cat!</button>
+  <script src="cat.js"></script>
+
+  <img id="cat-img" src="https://api.thecatapi.com/v1/images/search?size=full" alt="Cat" class="center" />
+  
+  <script>
+  const cat = document.getElementById("cat-img");
+  fetch('https://api.thecatapi.com/v1/images/search?size=full')
+  .then(response => response.json())
+  .then(data => cat.src = data[0].url);
+  </script>
+
+
+
+
+
+</body>
+</html>
