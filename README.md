@@ -1,4 +1,4 @@
 # random cat website
 
 
-click the button for a random cat.. WIN
+click the button for a random cat
