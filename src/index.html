@@ -2,10 +2,18 @@
 <!-- Version: N/A -->
 
 <html>
+  
   <head><link rel="stylesheet" href="style.css"></head>
+  <script script type="text/javascript" src="lightMode.js"></script>
+  <script script type="text/javascript" src="darkMode.js"></script>
+ 
+
     <body>
   <ul>
-    <li><a class="active" href="https://github.com/emboxity/random-cat">Random Cats</a></li>
+    <li><a class="active" href="https://github.com/emboxity/random-cat">Random Cats</a>
+      <img onclick="lightMode()" id="light-mode" src="lightMode.png" alt="light" class="lmode" width="25" height="25" />
+      <img onclick="darkMode()" id="dark-mode" src="darkMode.png" alt="dark" class="dmode" width="25" height="25" style="display:none"/>
+    </li>
 
   </ul>
 
@@ -19,14 +27,17 @@
   <button onclick = "catFunction()" class="button">Click me for a cat!</button>
   <script src="cat.js"></script>
 
-  <img id="cat-img" src="https://api.thecatapi.com/v1/images/search?size=full" alt="Cat" class="center" />
+  <img id="cat-img" src="https://api.thecatapi.com/v1/images/search?" alt="Cat" class="center" />
   
   <script>
   const cat = document.getElementById("cat-img");
-  fetch('https://api.thecatapi.com/v1/images/search?size=full')
+  fetch('https://api.thecatapi.com/v1/images/search?')
   .then(response => response.json())
   .then(data => cat.src = data[0].url);
   </script>
+
+
+<p class="footer">RandomCats - Made by Emboxity</p>
 
 
 
